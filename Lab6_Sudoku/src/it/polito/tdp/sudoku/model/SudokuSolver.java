@@ -34,8 +34,8 @@ public class SudokuSolver {
 		else
 			//prendo prima casella che ha uno zero e  provo a 
 			//cambiarne il numero provando una mossa solo se valida
-		{	for(int i=0;i<sudoku.length;i++){
-				for(int j=0;j<sudoku[i].length;j++){
+		{	for(int i=0;i<sudoku.length && !risolto;i++){
+				for(int j=0;j<sudoku[i].length && !risolto;j++){
 					if(sudoku[i][j]==0){
 							for(int valore=1;valore<10;valore++){
 								if(this.mossaValida(sudoku, i, j, valore)){
@@ -48,8 +48,8 @@ public class SudokuSolver {
 										}*/
 									risolviRic(parziale);
 								}
-							}
-							sudoku[i][j]=0;
+							}if(!risolto)
+								sudoku[i][j]=0;
 					}
 				}
 		}

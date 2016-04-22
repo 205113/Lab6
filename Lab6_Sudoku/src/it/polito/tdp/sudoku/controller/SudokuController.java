@@ -272,7 +272,7 @@ public class SudokuController {
     void doGenerate(ActionEvent event){
     	// Per generare un nuova nuova griglia di Sudoku
 		SudokuGenerator sg = new SudokuGenerator();
-		matrix = sg.nextBoard(levelExpert);
+		matrix = sg.nextBoard(levelEasy);
 		printMatrixOnScreen(matrix);
     }
     
