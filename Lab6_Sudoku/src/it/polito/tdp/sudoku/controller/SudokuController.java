@@ -279,7 +279,7 @@ public class SudokuController {
     @FXML
     void doSolve(ActionEvent event){
     	SudokuSolver s= new SudokuSolver();
-    	int[][] sudoku= s.risolvi(matrix);
+    	int[][] sudoku= s.recursiveSudokuOne(matrix);
     	printMatrixOnScreen(sudoku);
     }
     
